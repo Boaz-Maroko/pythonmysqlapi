@@ -39,6 +39,11 @@ Thank you for your interest in contributing to our MySQL API for Python! We beli
 
 ### Branching and Commit Messages
 
+#### Branch structure:
+- **Feature branch**: Development starts in the features branch, where new ideas are first implemented.
+- **Development branch**: Once a feature or idea is stable and functional in the feature branch, it is moved to the development branch, where it is refined and ironed out.
+- **Main branch**: The main branch is reserved for production-ready code only.
+
 - **Branch naming**: Use descriptive names for your branches:
    ```markdown
    feature/add-new-endpoint
