@@ -6,7 +6,7 @@ class ServerTests(TestCase):
     def test_server_callables(self):
         config = {
             "user": "pycode",
-            "password": "3edFA8ga&&",
+            "password": "your password",
             "host": "localhost",
         }
         server = Server(config)
