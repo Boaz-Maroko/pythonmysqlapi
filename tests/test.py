@@ -15,7 +15,7 @@ def create_server_instances():
 
 
 
-class ServerTests(TestCase):
+class ServerTests(TestCase)
     # I try to make the test names as simple as possible
 
     def test_server_name(self):
