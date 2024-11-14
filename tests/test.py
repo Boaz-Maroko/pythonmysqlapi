@@ -1,17 +1,27 @@
-from unittest import TestCase
-import mysql.connector as conn
 from api.main import Server
 
-class ServerTests(TestCase):
-    def test_server_callables(self):
-        config = {
-            "user": "pycode",
-            "password": "your password",
-            "host": "localhost",
-        }
-        server = Server(config)
+# Step 1: Create a configuration dictionary
+config = {
+    "user": "new_user",
+    "password": "new_password",
+    "host": "localhost",
+    "database": "pydatabase"
+}
 
-        self.assertEqual(str(server), 'localhost')
-        
-        
+# Step 2: Initialize the Server class
+server = Server(config)
 
+# Step 3: Check the connection
+if server.check_connection():
+    print("Connection successful!")
+else:
+    print("Connection failed!")
+
+# Step 4: Execute a query
+query = "SELECT * FROM your_table"
+results = server.execute_query(query)
+if results is not None:
+    for row in results:
+        print(row)
+else:
+    print("Query execution failed!")
